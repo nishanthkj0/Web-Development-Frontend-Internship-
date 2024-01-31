@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Bootstrap Table -->
+<table class="table table-bordered" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Column 1</th>
+            <th scope="col">Column 2</th>
+            <th scope="col">Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td onclick="openImage('https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1699920000&semt=ais')">Image 1</td>
+            <td onclick="openVideo('https://www.youtube.com/shorts/epatzTo78bo')">Video 1</td>
+            <td><button class="btn btn-success" onclick="showLists('list1')">Show List</button></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td onclick="openImage('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')">Image 2</td>
+            <td onclick="openVideo('https://www.youtube.com/shorts/cyrZcXko3AA')">Video 2</td>
+            <td><button class="btn btn-success" onclick="showLists('list2')">Show List</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- List Sections (Initially Hidden) -->
+<div id="list1" style="display: none;">
+    <h2>List 1:</h2>
+    <ul>
+        <li>Backpack</li>
+        <li>Smartphone</li>
+        <li>Water bottle</li>
+    </ul>
+</div>
+<div id="list2" style="display: none;">
+    <h2>List 2:</h2>
+    <ol>
+        <li>Ordered Item 1</li>
+        <li>Ordered Item 2</li>
+        <li>Ordered Item 3</li>
+    </ol>
+</div>
+
+<!-- Main JavaScript -->
+<script>
+    function openImage(imagePath) {
+        window.open(imagePath);
+    }
+
+    function openVideo(videoUrl) {
+        window.open(videoUrl);
+    }
+
+    function showLists(listId) {
+        // Hide all list sections
+        document.getElementById('list1').style.display = 'none';
+        document.getElementById('list2').style.display = 'none';
+
+        // Display the selected list section
+        document.getElementById(listId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
