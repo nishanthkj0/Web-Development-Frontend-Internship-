@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Layout with Float and Clear</title>
+	<style>
+		.wrapper {
+			margin: 0 auto;
+			width: 960px;
+		}
+
+		.left {
+			float: left;
+			width: 300px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			margin-right: 20px;
+		}
+
+		.right {
+			float:right;
+			width: 620px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			
+		}
+
+		.clear {
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="left">
+			<h2>Left Column</h2>
+			<p> I hope you may also understand that some words may apply to certain situations, but not to all of life</p>
+		</div>
+		<div class="right">
+			<h2>Right Column</h2>
+			<p>I have also included source links beneath some of these quotes, so make sure to check out their social media for more of their content!</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
